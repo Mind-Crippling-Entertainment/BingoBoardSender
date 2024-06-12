@@ -1,0 +1,4 @@
+//ESP8266 Board MAC Address:  C1:C2:A1:2F:77:AA  Receiver
+// REPLACE WITH RECEIVER MAC Address
+
+#define REMOTEMAC  {0xC1, 0xC2, 0xA1, 0x2F, 0x77, 0xAA}
