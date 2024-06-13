@@ -30,7 +30,7 @@ uint8_t broadcastAddress[] = REMOTEMAC;
 // Structure example to send data
 // Must match the receiver structure
 typedef struct struct_message {
-  char a[32];
+  String a;
 } struct_message;
 
 // Create a struct_message called myData
@@ -118,8 +118,8 @@ void ScreenSaver(void)
   }
 }
 
-void SendData(char * data){
-  strcpy(myData.a,"" + *data);
+void SendData(String data){
+   myData.a = data;
   esp_now_send(broadcastAddress, (uint8_t *) &myData, sizeof(myData));
 }
 
@@ -210,6 +210,7 @@ void loop() {
     {
       case 190: //Key B
         ManageData('B');
+        keyPressed = true;
       break;
 
       case 189: //Key 6

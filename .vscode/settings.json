@@ -1,0 +1,5 @@
+{
+    "cmake.buildEnvironment": {
+        "DIDF_TARGET": "esp32s2"
+    }
+}
